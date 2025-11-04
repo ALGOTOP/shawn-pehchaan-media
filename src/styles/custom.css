@@ -1,44 +1,64 @@
-:root {
-  --gradient-hero: linear-gradient(135deg, #ff5cf7, #8c7bff);
-  --gradient-accent: linear-gradient(90deg, #ffd166, #ff5cf7);
-  --brand-pink: #ff5cf7;
-  --brand-purple: #8c7bff;
-  --brand-yellow: #ffd166;
-  --dark-bg: #0f0f11;
-  --light-text: #fafafa;
+/* 🌀 Gradient backgrounds */
+.gradient-text {
+  background: linear-gradient(90deg, #00d4ff, #8a2be2, #ff0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Smooth gradient background animation */
 .gradient-bg {
-  background: var(--gradient-hero);
-  background-size: 200% 200%;
-  animation: gradientMove 10s ease infinite;
+  background: radial-gradient(circle at top left, #0f0f0f, #000);
 }
 
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* 💎 Glass effect for cards and navbar */
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
 }
 
-/* Subtle floating motion for images or elements */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-}
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+/* 🌫️ Soft motion shadows */
+.motion-shadow {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.04);
+  transition: box-shadow 0.3s ease;
 }
 
-/* Fade-in utility (used in Framer fallback) */
-.fade-in {
+.motion-shadow:hover {
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.08);
+}
+
+/* ✨ Smooth reveal animations (utility for Framer Motion) */
+.fade-in-up {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 1.2s ease forwards;
+  animation: fadeInUp 1s ease-out forwards;
 }
+
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* 🧭 Navbar blur background */
+.nav-blur {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 💬 Call-to-action button glow */
+.cta-button {
+  background: linear-gradient(90deg, #ff0080, #7928ca, #00d4ff);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.4s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
 }
