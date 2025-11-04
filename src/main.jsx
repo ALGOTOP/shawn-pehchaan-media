@@ -1,17 +1,11 @@
-// src/main.jsx
 import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App.jsx";            // main app with AnimatePresence + routes
-import "./styles/index.css";           // Tailwind base imports
-import "./styles/custom.css";          // custom vars, gradients, misc helpers
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";          // your base Tailwind styles
+import "./styles/custom.css";  // your custom gradients, animations, etc.
 
-// Create root and render App
-const rootEl = document.getElementById("root");
-if (!rootEl) {
-  throw new Error("Root element not found — ensure index.html contains <div id=\"root\"></div>");
-}
-
-createRoot(rootEl).render(
+// ✅ React 18 root render
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
