@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global defaults */
+html, body {
+  scroll-behavior: smooth;
+  background-color: #0f0f11;
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
