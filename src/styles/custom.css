@@ -8,6 +8,9 @@
 .gradient-bg {
   background: radial-gradient(circle at top left, #0f0f0f, #000);
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* 💎 Glass effect for cards and navbar */
 .glass {
