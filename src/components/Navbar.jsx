@@ -1,5 +1,4 @@
 import React from "react";
-import { navigateTo } from "../router.js";
 import { motion } from "framer-motion";
 
 const navLinks = [
